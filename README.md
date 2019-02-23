@@ -1,2 +1,2 @@
-# gt_data_science_hw
+# Georia Tech Data Science Homework
 Homework repository - GT Data Science
