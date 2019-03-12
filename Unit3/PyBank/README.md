@@ -1,7 +1,8 @@
 # PyBank
 
-Usage:
+##Usage:
 	python main.py
+
 	usage: main.py [-h] [--csv_source_path] [--print_to_screen] [--export_to_file]
 				   [--export_dest_path]
 
@@ -14,7 +15,7 @@ Usage:
 	  --export_to_file     export analysis result to file
 	  --export_dest_path   path for export analysis file
 
-Example:
+##Example:
 	python main.py
 
 
