@@ -1,11 +1,11 @@
-# PyBank
+# PyPool
 
 ## Usage:
 
 	usage: main.py [-h] [--csv_source_path] [--print_to_screen] [--export_to_file]
 				   [--export_dest_path]
 
-	PyBank Application
+	PyPool Application
 
 	optional arguments:
 	  -h, --help           show this help message and exit
@@ -18,23 +18,27 @@
 	python main.py
 
 
-	PyBank Application - Data Science BootCamp 2019
+	PyPool Application - Data Science BootCamp 2019
 
 	Parameters:
-		Path for source CSV dataset.......: resources/budget_data.csv
+		Path for source CSV dataset.......: resources/election_data.csv
 		Print analysis result to screen...: True
 		Export analysis result to file....: True
 		Path for export analysis file.....: resources/result.txt
 
 
-	Financial Analysis
-	--------------------------------
-	Total Months...................: 86
-	Total..........................: $ 38,382,578.00
-	Average Change.................: $ -2,315.12
-	Greatest Increase in Profits...: Feb-2012 ($ 1,926,159.00)
-	Greatest Decrease in Profits...: Sep-2013 ($ -2,196,167.00)
+	Election Results
+	-------------------------
+	Total Votes : 3521001
+	-------------------------
+	Khan: 63.000% (2218231)
+	Correy: 20.000% (704200)
+	Li: 14.000% (492940)
+	O'Tooley: 3.000% (105630)
+	-------------------------
+	Winner : Khan
+	-------------------------
 
-	Process completed in 0.242366 second(s)
+	Process completed in 8.35843 second(s)
 
 	
