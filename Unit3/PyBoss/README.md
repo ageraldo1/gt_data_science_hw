@@ -25,4 +25,4 @@
 	Process completed in 0.046882 second(s)
 
 ## Output
-	[a new_employee_data.csv](gt_data_science_hw/Unit3/PyBoss/resources/new_employee_data.csv)
+[new_emploee_data.csv](resources/new_employee_data.csv)
