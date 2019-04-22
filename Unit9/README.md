@@ -300,8 +300,8 @@ DROP VIEW IF EXISTS Top5_Genres_Gross_Revenue;
 
 ### Files
 ____
-+ [SQL script] (./sakila_hw.sql)
-+ [SQL output] (./sakila_hw_output.txt)
++ [SQL script](./sakila_hw.sql)
++ [SQL output](./sakila_hw_output.txt)
 
 
 
