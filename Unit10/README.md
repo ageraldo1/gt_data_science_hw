@@ -509,4 +509,4 @@ ____
 
 #### Endpoints
 ____
-![png](images/endpoints.png)
+![png](images/endpoints.PNG)
