@@ -49,7 +49,7 @@ class MeasurementModel(db.Model):
         last_datapoint = datetime.strptime(MeasurementModel.query.with_entities(db.func.max(db.func.Date(MeasurementModel.date))).scalar(), '%Y-%m-%d')
         previous_year = last_datapoint - relativedelta(months=12) 
 
-        return MeasurementModel.query.filter(MeasurementModel.date > previous_year).all()
+        return MeasurementModel.query.filter(db.func.Date(MeasurementModel.date) > previous_year).all()
 
     @classmethod
     def get_all_measurements(cls):
