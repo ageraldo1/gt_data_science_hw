@@ -43,6 +43,11 @@ class MeasurementModel(db.Model):
         last_datapoint  = MeasurementModel.query.with_entities(db.func.max(db.func.Date(MeasurementModel.date))).scalar()
 
         return MeasurementModel.query.filter(MeasurementModel.date == last_datapoint).all()
+
+    @classmethod
+    def get_last_data_point(cls):
+        last_datapoint = MeasurementModel.query.with_entities(db.func.max(MeasurementModel.id)).scalar()
+        return MeasurementModel.query.filter(MeasurementModel.id == last_datapoint).first()
     
     @classmethod
     def get_previous_year_data_points(cls):
