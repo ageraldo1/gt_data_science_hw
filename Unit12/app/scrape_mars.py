@@ -29,7 +29,7 @@ def scrape_mars_news():
                 mars_news.append({'news_title' : news_title, 'news_p': news_p})
 
             if has_found == False:
-                with open ('debug_html.txt') as f:
+                with open ('debug_news.html','w') as f:
                     f.write(response)
 
                     print ("debug file created")

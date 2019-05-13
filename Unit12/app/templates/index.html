@@ -11,22 +11,22 @@
     <title>Mission to Mars</title>
   </head>
 
-  <body>    
+  <body class="text-white" style="background-color:black;">    
        <div class="container">
-            <div class="jumbotron text-center" style="padding: 10px;">
-                    <h2 class="display-12">Mission to Mars</h2>
+            <div class="jumbotron text-center" style="background-image: url(https://mars.nasa.gov/assets/red_planet_bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center" >
+                    <h1 class="display-12" style="color:#B3D4FB">Mission to Mars</h1>
                     <p class="lead">
-                        <a class="btn btn-primary" href="/scrape" role="button">Scrape New Data</a>
+                        <a class="btn btn-info btn-lg" href="/scrape" role="button">Scrape New Data</a>
                     </p>
               </div>              
 
               <div class="box" style="padding-bottom: 30px">
-                  <h3>Latest Mars News</h3>
+                  <h3 style="color: #B3D4FB">Latest Mars News</h3>
                   <hr>
 
                   <div class="table-responsive" style="max-height:150px">
                     {% for news in mars_document['mars_news'] %}
-                       <h6>{{ news['news_title'] }}</h6>
+                       <h5>{{ news['news_title'] }}</h5>
                        <p>{{ news['news_p'] }}</p>
                     {% endfor %}
                   </div>
@@ -36,14 +36,14 @@
               <div class="box" style="padding-bottom: 30px">
                     <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-12">
-                                <h3>Featured Mars Image</h3>
+                                <h3 style="color: #B3D4FB">Featured Mars Image</h3>
                                 {% if 'featured_image_url' in mars_document['jpl_mars_images'] %}
                                     <img src="{{ mars_document['jpl_mars_images']['featured_image_url'] }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
                                 {% endif %}
                             </div>
 
                             <div class="col-lg-4 col-md-4 col-sm-12">
-                                <div class="card">
+                                <div class="card text-white bg-dark">
                                     <div class="card-body">
                                         <h5 class="card-title">Current Weather on Mars</h5>
                                         {% if 'mars_weather' in  mars_document['mars_weather'] %}
@@ -53,8 +53,8 @@
                                 </div>
 
                                 <br>
-                                    <h3>Mars Facts</h3>
-                                    <div class="table table-striped table-sm" style="font-size: 15px">                                        
+                                    <h3 style="color: #B3D4FB">Mars Facts</h3>
+                                    <div class="table table-striped table-sm table-dark" style="font-size: 15px;">                                        
                                         {% if 'table_content' in mars_document['mars_facts'] %}
                                             {{ mars_document['mars_facts']['table_content'] | safe}}                                            
                                         {% endif %}
@@ -64,14 +64,14 @@
               </div>
 
               <div class="box text-center" style="padding-bottom: 30px">
-                <h3> Mars Hemispheres</h3>
+                <h3 style="color: #B3D4FB"> Mars Hemispheres</h3>
                 <hr>
 
                 <div class="col-md-12">
                     <div class="row">
                         {% for item in mars_document['mars_hemispheres'] %}
                         <div class="col-md-6">
-                            <div class="card" style="margin: 30px;">
+                            <div class="card text-white bg-dark" style="margin: 30px;">
                                 <img class="card-img-top" src="{{ item.img_url }}" />
                                 <div class="card-body">
                                     <p class="card-text">{{ item.title }}</p>
